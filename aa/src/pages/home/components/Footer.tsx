@@ -6,7 +6,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-8">
           <div className="col-span-2">
             <div className="text-2xl font-bold text-blue-400 font-pacifico mb-4">
-              PSA Bootcamp
+              AI x PSA Bootcamp
             </div>
             <p className="text-gray-300 mb-6">
               AIを活用した問題解決プロフェッショナル養成プログラム。<br />
