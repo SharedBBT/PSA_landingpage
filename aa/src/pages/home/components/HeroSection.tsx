@@ -49,24 +49,31 @@ export default function HeroSection() {
               </div>
             </div>
           </div>
-          <div className="relative">
-            <img 
-              src="https://readdy.ai/api/search-image?query=Professional%20Japanese%20business%20consultant%20working%20with%20AI%20technology%2C%20analyzing%20complex%20problem-solving%20frameworks%20and%20data%20visualization%2C%20modern%20clean%20office%20environment%2C%20collaboration%20between%20human%20and%20artificial%20intelligence%2C%20strategic%20thinking%20process%2C%20professional%20development%20and%20learning%2C%20innovative%20education%20technology%2C%20blue%20and%20white%20color%20scheme%2C%20Asian%20professional%20in%20business%20attire&width=600&height=600&seq=hero-main-jp&orientation=squarish"
-              alt="AI問題解決プロフェッショナル"
-              className="w-full rounded-2xl shadow-2xl object-cover"
-            />
-            <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-lg">
-              <div className="flex items-center space-x-3">
-                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
-                  <i className="ri-check-line text-green-600 text-xl"></i>
-                </div>
-                <div>
-                  <div className="font-semibold text-gray-900">実際の課題解決</div>
-                  <div className="text-sm text-gray-600">学習と成果が直結</div>
-                </div>
-              </div>
-            </div>
-          </div>
+       <div className="relative -mt-10">
+  {/* 图片容器：裁剪 + 动画 */}
+  <div className="overflow-hidden rounded-2xl shadow-2xl group transition-all duration-500 ease-out hover:shadow-3xl">
+    <div className="w-[120%] -ml-[10%] transition-transform duration-500 ease-out group-hover:scale-105">
+      <img
+        src="https://franklincovey.vn/uploads/white-papers/08/kien-tao-nha-lanh-dao.jpg"
+        alt="AI問題解決プロフェッショナル"
+        className="w-full object-cover"
+      />
+    </div>
+  </div>
+
+  {/* 底部浮动卡片 */}
+  <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-lg z-10 transition-shadow duration-500 ease-out group-hover:shadow-xl">
+    <div className="flex items-center space-x-3">
+      <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+        <i className="ri-check-line text-green-600 text-xl"></i>
+      </div>
+      <div>
+        <div className="font-semibold text-gray-900">実際の課題解決</div>
+        <div className="text-sm text-gray-600">学習と成果が直結</div>
+      </div>
+    </div>
+  </div>
+</div>
         </div>
       </div>
     </section>
