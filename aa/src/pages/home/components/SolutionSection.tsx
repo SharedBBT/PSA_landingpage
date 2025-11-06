@@ -1,62 +1,100 @@
+import { motion } from "framer-motion";
+import { User, Lightbulb, Bot } from "lucide-react";
 
 export default function SolutionSection() {
+  const features = [
+    {
+      icon: <User className="w-5 h-5 text-blue-600" />,
+      title: "あなたは「受講者」ではなく「実践者」",
+      description:
+        "インプットするのではなく、アウトプットを通じて「できる」スキルを掴み取る",
+    },
+    {
+      icon: <Lightbulb className="w-5 h-5 text-blue-600" />,
+      title: "あなた自身のリアルな課題が教材",
+      description:
+        "架空のケーススタディではなく、今まさに直面している実際の課題で学習",
+    },
+    {
+      icon: <Bot className="w-5 h-5 text-blue-600" />,
+      title: "AIという「最強の思考パートナー」",
+      description: "1日30分、継続的に課題解決の全プロセスを実践",
+    },
+  ];
+
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-gradient-to-b from-white to-blue-50 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <img 
-              src="https://readdy.ai/api/search-image?query=Japanese%20business%20professional%20collaborating%20with%20AI%20technology%20for%20problem%20solving%2C%20modern%20workspace%20with%20digital%20tools%20and%20analytics%2C%20person%20engaged%20in%20strategic%20thinking%20and%20analysis%2C%20innovative%20learning%20environment%2C%20professional%20development%20through%20technology%2C%20clean%20modern%20design%20with%20blue%20accents%2C%20Asian%20professional%20in%20business%20attire&width=600&height=500&seq=solution-img-jp&orientation=landscape"
+          {/* 左：图片动画 */}
+          <motion.div
+            initial={{ opacity: 0, x: -60 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="flex justify-center"
+          >
+            <img
+              src="https://www.knowledgewing.com/kcc/share/images/single16_02.jpg"
               alt="AI協働による問題解決"
-              className="w-full rounded-2xl shadow-xl object-cover"
+              className="w-full max-w-md lg:max-w-lg rounded-2xl shadow-2xl object-cover border border-blue-100"
             />
-          </div>
-          <div>
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+          </motion.div>
+
+          {/* 右：文本区块 */}
+          <motion.div
+            initial={{ opacity: 0, x: 60 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6 leading-snug">
               私たちが提供するのは<br />
               <span className="text-blue-600">思考のトレーニング</span><br />
               Bootcamp
             </h2>
+
+            {/* 特徴リスト */}
             <div className="space-y-6">
-              <div className="flex items-start space-x-4">
-                <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <i className="ri-user-star-line text-blue-600"></i>
-                </div>
-                <div>
-                  <h3 className="font-semibold text-gray-900 mb-2">あなたは「受講者」ではなく「実践者」</h3>
-                  <p className="text-gray-600">インプットするのではなく、アウトプットを通じて「できる」スキルを掴み取る</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start space-x-4">
-                <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <i className="ri-lightbulb-line text-blue-600"></i>
-                </div>
-                <div>
-                  <h3 className="font-semibold text-gray-900 mb-2">あなた自身のリアルな課題が教材</h3>
-                  <p className="text-gray-600">架空のケーススタディではなく、今まさに直面している実際の課題で学習</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start space-x-4">
-                <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <i className="ri-robot-line text-blue-600"></i>
-                </div>
-                <div>
-                  <h3 className="font-semibold text-gray-900 mb-2">AIという「最強の思考パートナー」</h3>
-                  <p className="text-gray-600">1日30分、継続的に課題解決の全プロセスを実践</p>
-                </div>
-              </div>
+              {features.map((f, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.2 + i * 0.15 }}
+                  viewport={{ once: true }}
+                  className="flex items-start space-x-4"
+                >
+                  <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1 shadow-sm">
+                    {f.icon}
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-gray-900 mb-2">
+                      {f.title}
+                    </h3>
+                    <p className="text-gray-600">{f.description}</p>
+                  </div>
+                </motion.div>
+              ))}
             </div>
-            
-            <div className="mt-8 p-6 bg-blue-50 rounded-xl">
-              <h4 className="font-semibold text-blue-900 mb-2">あなたが手に入れるもの</h4>
-              <p className="text-blue-800">
+
+            {/* 强调语 */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.8 }}
+              viewport={{ once: true }}
+              className="mt-10 p-6 bg-blue-100/60 rounded-xl border border-blue-200 shadow-inner"
+            >
+              <h4 className="font-semibold text-blue-900 mb-2">
+                あなたが手に入れるもの
+              </h4>
+              <p className="text-blue-800 leading-relaxed">
                 「自らの問題で、AIを活用し、自ら解を導き出す力」<br />
                 それこそが、あなたがこのコースで得られる価値です。
               </p>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </div>
       </div>
     </section>

@@ -1,56 +1,90 @@
-
-import Button from '../../../components/base/Button';
-
-export default function CTASection() {
+export default function TransformationSection() {
   return (
-    <section className="py-20 bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-700 text-white relative overflow-hidden">
-      <div 
-        className="absolute inset-0 bg-cover bg-center opacity-20"
-        style={{
-          backgroundImage: `url('https://readdy.ai/api/search-image?query=Professional%20success%20and%20achievement%20in%20modern%20business%20environment%2C%20team%20collaboration%20and%20leadership%20development%2C%20strategic%20thinking%20and%20problem-solving%20success%2C%20corporate%20training%20and%20professional%20growth%2C%20inspiring%20workplace%20transformation%2C%20blue%20and%20purple%20gradient%20lighting&width=1920&height=1080&seq=cta-bg&orientation=landscape')`
-        }}
-      />
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-3xl lg:text-5xl font-bold mb-6">
-          「問題に悩む人」から<br />
-          <span className="text-yellow-300">「問題を解決する人」</span>へ
-        </h2>
-        <p className="text-xl lg:text-2xl mb-8 opacity-90">
-          知識を入れて満足する「学習者」で終わらないでください。<br />
-          上司や周囲も舌を巻く「プロブレムソルバー」として行動する、その第一歩を踏み出しましょう。
-        </p>
-        
-        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
-          <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 shadow-2xl">
-            <i className="ri-phone-line mr-2"></i>
-            無料説明会に参加する
-          </Button>
-          <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-blue-600">
-            <i className="ri-download-cloud-line mr-2"></i>
-            詳細資料をダウンロード
-          </Button>
-        </div>
-        
-        <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-          <div className="text-center">
-            <div className="text-4xl font-bold mb-2">3</div>
-            <div className="text-yellow-300">ヶ月間の集中プログラム</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold mb-2">30</div>
-            <div className="text-yellow-300">分/日から始められる</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold mb-2">100%</div>
-            <div className="text-yellow-300">実践重視のカリキュラム</div>
-          </div>
-        </div>
-        
-        <div className="mt-12 bg-white/10 backdrop-blur-sm p-6 rounded-2xl max-w-2xl mx-auto">
-          <h3 className="text-xl font-semibold mb-4">このコースが、日々の問題発見・解決のための</h3>
-          <p className="text-lg">
-            <span className="text-yellow-300 font-bold">信頼できる相棒</span>となることを願っています。
+    <section
+      id="benefits"
+      className="py-16 bg-gradient-to-br from-blue-50 via-white to-indigo-100"
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">
+            あなたが手に入れるもの
+          </h2>
+          <p className="text-base text-gray-600 leading-relaxed">
+            3ヶ月後、あなたは組織で最も頼られる  
+            <span className="font-semibold text-blue-600">「問題解決のプロフェッショナル」</span>へ
           </p>
+        </div>
+
+        {/* Before / After */}
+        <div className="grid lg:grid-cols-2 gap-10 items-start mb-16">
+          {/* Before */}
+          <div className="bg-white/90 backdrop-blur-sm p-8 rounded-2xl shadow-lg border border-red-100 hover:shadow-xl transition-all duration-300">
+            <h3 className="text-2xl font-bold text-red-600 mb-5 flex items-center">
+              <i className="ri-emotion-sad-line mr-2 text-3xl"></i>
+              Before（研修前）
+            </h3>
+            <ul className="space-y-3 text-gray-700">
+              {[
+                "問題に直面すると混乱する",
+                "解決策が思い浮かばない",
+                "一人で抱え込んでしまう",
+              ].map((text, i) => (
+                <li key={i} className="flex items-start space-x-2">
+                  <i className="ri-close-circle-line text-red-500 mt-0.5 flex-shrink-0"></i>
+                  <span>{text}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* After */}
+          <div className="bg-white/90 backdrop-blur-sm p-8 rounded-2xl shadow-lg border border-blue-100 hover:shadow-xl transition-all duration-300">
+            <h3 className="text-2xl font-bold text-blue-600 mb-5 flex items-center">
+              <i className="ri-emotion-happy-line mr-2 text-3xl"></i>
+              After（研修後）
+            </h3>
+            <ul className="space-y-3 text-gray-700">
+              {[
+                "どんな問題も冷静に分析できる",
+                "効果的な解決策を素早く発見",
+                "AIと協働して最適解を導き出す",
+              ].map((text, i) => (
+                <li key={i} className="flex items-start space-x-2">
+                  <i className="ri-check-circle-line text-blue-500 mt-0.5 flex-shrink-0"></i>
+                  <span>{text}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        {/* Result */}
+        <div className="text-center">
+          <div className="inline-block bg-gradient-to-r from-blue-600 to-red-500 text-white px-10 py-10 rounded-2xl shadow-2xl max-w-4xl">
+            <div className="flex items-center justify-center mb-4">
+              <i className="ri-trophy-line text-4xl mr-3"></i>
+              <h3 className="text-2xl font-bold tracking-wide">結果として...</h3>
+            </div>
+
+            <p className="text-base mb-2 text-blue-50">
+              あなたは単なる「問題解決の知識を持つ人」ではなく、
+            </p>
+            <p className="text-2xl font-bold leading-relaxed mb-4">
+              組織で最も頼られる  
+              <span className="text-yellow-300">「問題解決のプロフェッショナル」</span>へと変貌を遂げます。
+            </p>
+
+            <div className="mt-4 text-blue-100 text-sm leading-relaxed">
+              <p>
+                これが、マーケティング・営業・経営企画・開発・人事...
+                あらゆる部門のトップが共通して使う
+              </p>
+              <p className="font-semibold text-white mt-1">
+                「脳のキラーアプリ」— PSA の真の価値です。
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
