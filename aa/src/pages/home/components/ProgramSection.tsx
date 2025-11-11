@@ -131,16 +131,27 @@ export default function ProgramSection() {
 
         {/* Footer */}
         <div className="mt-12 text-center">
-          <div className="bg-gray-50 border border-gray-200 p-8 rounded-2xl max-w-4xl mx-auto shadow-sm">
-            <h3 className="text-xl font-bold text-gray-900 mb-3">
+          <div
+            className="
+              relative inline-block max-w-4xl
+              bg-gradient-to-br from-blue-700 to-blue-900
+              text-white px-10 py-10
+              rounded-3xl shadow-[0_8px_40px_rgba(30,64,175,0.3)]
+              border border-blue-300/40
+              hover:shadow-[0_10px_50px_rgba(30,64,175,0.45)]
+              hover:-translate-y-1
+              transition-all duration-500
+            "
+          >
+            <h3 className="text-xl font-bold mb-3 text-white drop-shadow-sm">
               プロブレムソルビング・アプローチ（PSA）
             </h3>
-            <p className="text-gray-600 text-sm mb-4 leading-relaxed">
+            <p className="text-blue-100 text-sm mb-4 leading-relaxed">
               戦略コンサルティングファームで磨き上げられた思考技術。
               複雑なカオスの中から「解くべき真の問い（Key Issue）」を特定し、
               ファクトとロジックで本質を貫く。
             </p>
-            <div className="bg-gradient-to-r from-blue-600 to-red-500 text-white px-6 py-3 rounded-full inline-block font-semibold text-sm shadow-md">
+            <div className="bg-white/10 text-yellow-300 px-6 py-3 rounded-full inline-block font-semibold text-sm shadow-md border border-blue-300/30">
               マーケティング・営業・経営企画・開発・人事...  
               あらゆる部門を貫く「脳のキラーアプリ」
             </div>

@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { strong } from "framer-motion/client";
 import { User, Lightbulb, Bot } from "lucide-react";
 
 export default function SolutionSection() {
@@ -6,19 +7,29 @@ export default function SolutionSection() {
     {
       icon: <User className="w-5 h-5 text-blue-600" />,
       title: "あなたは「受講者」ではなく「実践者」",
-      description:
-        "インプットするのではなく、アウトプットを通じて「できる」スキルを掴み取る",
+      description: (
+        <>
+          理論は「核」だけを学び、即アウトプットへ<br />
+          <strong>インプット3割：</strong>
+          アウトプット7割の「実戦比率」で、「知っている」を「使いこなせる」に変える
+        </>
+      ),
     },
     {
       icon: <Lightbulb className="w-5 h-5 text-blue-600" />,
-      title: "あなた自身のリアルな課題が教材",
+      title: "あなた自身の「リアルな課題」が教材",
       description:
-        "架空のケーススタディではなく、今まさに直面している実際の課題で学習",
+        "架空の事例研究はしない。今あなたが直面する「売上低迷」や「組織の軋轢」こそが最高の教材。だから、学ぶと成果を出すが100%直結する",
     },
     {
       icon: <Bot className="w-5 h-5 text-blue-600" />,
-      title: "AIという「最強の思考パートナー」",
-      description: "1日30分、継続的に課題解決の全プロセスを実践",
+      title: "AIは「ツール」ではなく「相棒」である",
+      description: (
+        <>
+          一人では見落とす視点。仮説の高速検証。
+          <strong>AIを「壁打ち相手」に、あなたの“問題解決思考”を何倍も深く、速くする</strong>
+        </>
+      ),
     },
   ];
 
@@ -35,7 +46,7 @@ export default function SolutionSection() {
             className="flex justify-center"
           >
             <img
-              src="https://www.knowledgewing.com/kcc/share/images/single16_02.jpg"
+              src="https://github.com/SharedBBT/psa-assets/blob/main/shutterstock_430168801.jpg?raw=true"
               alt="AI協働による問題解決"
               className="w-full max-w-md lg:max-w-lg rounded-2xl shadow-2xl object-cover border border-blue-100"
             />
@@ -49,9 +60,8 @@ export default function SolutionSection() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6 leading-snug">
-              私たちが提供するのは<br />
-              <span className="text-blue-600">思考のトレーニング</span><br />
-              Bootcamp
+              これは「研修」ではない<br />
+              <span className="text-blue-600">「思考のジム」である</span><br />
             </h2>
 
             {/* 特徴リスト */}
@@ -87,11 +97,12 @@ export default function SolutionSection() {
               className="mt-10 p-6 bg-blue-100/60 rounded-xl border border-blue-200 shadow-inner"
             >
               <h4 className="font-semibold text-blue-900 mb-2">
-                あなたが手に入れるもの
+                「あなたが手にする「真の価値」
               </h4>
               <p className="text-blue-800 leading-relaxed">
-                「自らの問題で、AIを活用し、自ら解を導き出す力」<br />
-                それこそが、あなたがこのコースで得られる価値です。
+                「誰かの正解」ではなく、「自ら導き出す最適解」を創る力<br />
+                AIを使いこなし、自分自身の“生きた課題”を解決に導く<br />
+                それこそが、ここで得られる唯一無二の資産です
               </p>
             </motion.div>
           </motion.div>

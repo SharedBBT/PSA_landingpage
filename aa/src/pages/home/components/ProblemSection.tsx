@@ -3,28 +3,28 @@ import { motion } from "framer-motion";
 import { BookOpen, Clock, Users } from "lucide-react";
 
 export default function ProblemSection() {
-  // 問題リスト（アイコンは lucide-react のシンプル線アイコンに変更）
   const problems = [
     {
-      icon: <BookOpen className="w-8 h-8 text-blue-700" />,
-      title: "理論ばかりで実践できない",
+      icon: <BookOpen className="w-12 h-9 text-blue-700" />,
+      title: "フレームワーク中心で実践できない",
       description: "フレームワークを覚えても、実際の現場で使えない。"
     },
     {
-      icon: <Clock className="w-8 h-8 text-blue-700" />,
-      title: "学んでも現場で使えない",
-      description: "研修は良かったが、翌日には元通りになってしまう。"
+      icon: <Clock className="w-8 h-9 text-blue-700" />,
+      title: "学んでも忘れてしまう",
+      description: "自分事でない学びなので、現場で使う前に忘却曲線、元通りに"
     },
     {
-      icon: <Users className="w-8 h-8 text-blue-700" />,
-      title: "一人で考える限界がある",
-      description: "複雑な問題に直面すると、思考が行き詰まってしまう。"
+      icon: <Users className="w-8 h-9 text-blue-700" />,
+      title: "自身と関係ないケース学習が多い",
+      description: "「私が今直面している問題の解決」にすぐつながらない"
     }
   ];
 
   return (
     <section className="py-24 bg-gradient-to-br from-white to-blue-50">
-      <div className="max-w-6xl mx-auto px-6 text-center">
+      {/* 容器变宽 */}
+      <div className="max-w-7xl mx-auto px-6 text-center">
         {/* セクション見出し */}
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -33,27 +33,28 @@ export default function ProblemSection() {
           viewport={{ once: true }}
           className="text-3xl md:text-4xl font-bold text-[var(--color-primary)] mb-6 leading-snug"
         >
-          なぜ多くの問題解決研修は
+          なぜ、あなたの問題解決力は
           <br />
           <span className="bg-gradient-to-r from-blue-700 to-indigo-500 bg-clip-text text-transparent">
-            「現場で使えない」
+            「現場で発揮されない」
           </span>
           のか？
         </motion.h2>
 
+        {/* 段落部分 - 间距调整 */}
         <motion.p
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.8 }}
-          className="text-lg text-gray-600 max-w-3xl mx-auto mb-16"
+          className="text-lg text-gray-600 max-w-3xl mx-auto mb-8 leading-relaxed"
         >
-          従来の研修が「フレームワークを教える」ことを中心としているため。
-          ケーススタディで学んだ知識は、いざ自分の問題に直面したとき、
-          すぐに応用できないことが多いのです。
+          「ロジカルシンキング研修も受けた。本も読んだ。なのに、なぜ…」
+          <br />
+          多くのリーダーが同じ壁にぶつかっています。
         </motion.p>
 
-        {/* 問題カード */}
-        <div className="grid md:grid-cols-3 gap-8">
+        {/* 問題カード - 调宽、减少间距 */}
+        <div className="grid md:grid-cols-3 gap-6">
           {problems.map((problem, index) => (
             <motion.div
               key={index}
@@ -61,12 +62,12 @@ export default function ProblemSection() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.2 }}
               viewport={{ once: true }}
-              className="bg-white/80 backdrop-blur-sm border border-blue-100 p-8 rounded-2xl shadow-sm hover:shadow-lg transition-shadow"
+              className="bg-white/80 backdrop-blur-sm border border-blue-100 p-8 rounded-2xl shadow-sm hover:shadow-lg transition-shadow min-h-[260px]"
             >
               <div className="w-16 h-16 mx-auto mb-6 flex items-center justify-center rounded-full bg-blue-100">
                 {problem.icon}
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">
+              <h3 className="text-xl font-semibold text-gray-900 mb-3 whitespace-normal">
                 {problem.title}
               </h3>
               <p className="text-gray-600 leading-relaxed">{problem.description}</p>
