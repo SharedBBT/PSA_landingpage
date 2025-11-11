@@ -115,10 +115,28 @@ export default function LearningCycleSection() {
             ))}
           </div>
 
+          {/* Info Box - 使用内联样式确保显示 */}
           <div className="text-center mt-6">
-            <div className="bg-blue-50 border border-blue-200 p-5 rounded-xl inline-block text-sm text-blue-800 leading-relaxed">
-              <strong>21日分のメニュー</strong>で、1日30分ずつ進められます。<br />
-              忙しい時期があっても、Week 4で必ずキャッチアップできる設計です。
+            <div
+              className="relative overflow-hidden inline-block max-w-4xl rounded-3xl px-12 py-10 transition-all duration-500"
+              style={{
+                background: 'linear-gradient(to bottom right, #1d4ed8, #1e3a8a)',
+                border: '1px solid rgba(147, 197, 253, 0.4)',
+                boxShadow: '0 8px 40px rgba(30, 64, 175, 0.3)',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.boxShadow = '0 10px 50px rgba(30, 64, 175, 0.45)';
+                e.currentTarget.style.transform = 'translateY(-4px)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.boxShadow = '0 8px 40px rgba(30, 64, 175, 0.3)';
+                e.currentTarget.style.transform = 'translateY(0)';
+              }}
+            >
+              <div className="relative z-10 text-sm font-medium leading-relaxed" style={{ color: 'rgba(219, 234, 254, 0.9)' }}>
+                <strong style={{ color: '#ffffff' }}>21日分のメニュー</strong>で、1日30分ずつ進められます。<br />
+                忙しい時期があっても、Week 4で必ずキャッチアップできる設計です。
+              </div>
             </div>
           </div>
         </div>
@@ -152,15 +170,51 @@ export default function LearningCycleSection() {
           </div>
         </div>
 
-        {/* Conclusion */}
-        <div className="text-center mt-12">
-          <div className="bg-gradient-to-r from-blue-600 to-red-500 text-white p-8 rounded-2xl max-w-3xl mx-auto shadow-lg">
-            <h4 className="text-2xl font-bold mb-3">だからこそ</h4>
-            <p className="text-lg font-medium leading-relaxed">
-              「学んだことがすぐ使える」「成果が見える」——
-              <br />
-              それが、このプログラム最大の価値です。
-            </p>
+        {/* Conclusion - 使用内联样式确保显示 */}
+        <div className="text-center mt-12 relative">
+          <div
+            className="relative overflow-hidden inline-block max-w-4xl rounded-3xl px-12 py-12 transition-all duration-500"
+            style={{
+              background: 'linear-gradient(to bottom right, #1d4ed8, #1e3a8a)',
+              border: '1px solid rgba(147, 197, 253, 0.4)',
+              boxShadow: '0 8px 40px rgba(30, 64, 175, 0.3)',
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.boxShadow = '0 10px 50px rgba(30, 64, 175, 0.45)';
+              e.currentTarget.style.transform = 'translateY(-4px)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.boxShadow = '0 8px 40px rgba(30, 64, 175, 0.3)';
+              e.currentTarget.style.transform = 'translateY(0)';
+            }}
+          >
+            <div className="relative z-10">
+              <div className="flex items-center justify-center mb-5">
+                <i className="ri-trophy-line text-4xl mr-3" style={{ color: '#fde047', filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}></i>
+                <h3 className="text-2xl font-bold tracking-wide" style={{ color: '#ffffff', filter: 'drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2))' }}>
+                  だからこそ
+                </h3>
+              </div>
+
+              <p className="text-base mb-2" style={{ color: 'rgba(219, 234, 254, 0.9)' }}>
+                「学んだことがすぐ使える」
+              </p>
+
+              <p className="text-2xl font-bold leading-relaxed mb-4" style={{ color: '#ffffff', filter: 'drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2))' }}>
+                「成果が見える」{" "}
+                <span style={{ color: '#fde047' }}></span>
+                ——
+              </p>
+
+              <div className="mt-4 text-sm leading-relaxed" style={{ color: 'rgba(219, 234, 254, 0.9)' }}>
+                <p>
+                  それが、
+                </p>
+                <p className="font-semibold mt-1" style={{ color: '#ffffff' }}>
+                  このプログラム最大の価値です。
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

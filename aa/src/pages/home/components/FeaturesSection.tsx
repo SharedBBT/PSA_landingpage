@@ -43,7 +43,7 @@ export default function FeaturesSection() {
           <span className="text-blue-600">3つの理由</span>
         </h2>
         <p className="text-gray-600 mb-12 text-sm md:text-base">
-          AIと共に「考え・実践し・定着させる」― 成果につながる新しい学びの形。
+          「学んで終わり」ではない。AIと共に、あなたの脳をアップデートする。
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
@@ -55,7 +55,7 @@ export default function FeaturesSection() {
               {/* Header */}
               <div>
                 <div className="flex items-center mb-4">
-                  <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-red-500 text-white rounded-full flex items-center justify-center font-bold text-sm mr-3">
+                  <div className="w-8 h-8 border-2 border-blue-600 text-blue-600 rounded-full flex items-center justify-center font-bold text-sm mr-3">
                     {f.number}
                   </div>
                   <div>
