@@ -36,14 +36,14 @@ export default function HeroSection() {
 
             <p className="text-l text-gray-600 mb-8 leading-relaxed">
               <strong>「また対症療法で終わってしまった…」</strong>
-              そんな自分から卒業しませんか?AIを最強の相棒に「問題の真因」を特定し、
-              根本解決策を導き出す。3ヶ月で、あなたの脳と思考をアップデートする実践型プログラム
+              そんな自分から卒業しませんか?<br/>AIを最強の相棒に「問題の真因」を特定し、
+              根本解決策を導き出す<br/>3ヶ月で、あなたの脳と思考をアップデートする実践型プログラム
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
               <Button size="lg" className="flex items-center justify-center">
                 <i className="ri-play-circle-line mr-2"></i>
-                無料説明会に参加
+                無料相談
               </Button>
 
               <Button variant="outline" size="lg" className="flex items-center justify-center">
@@ -78,7 +78,7 @@ export default function HeroSection() {
             <div className="overflow-hidden rounded-2xl shadow-2xl group transition-all duration-500 ease-out hover:shadow-3xl">
               <div className="w-[120%] -ml-[10%] transition-transform duration-500 ease-out group-hover:scale-105">
                 <img
-                  src="https://github.com/SharedBBT/psa-assets/blob/main/backgroundimg.jpg?raw=true"
+                  src="https://github.com/SharedBBT/psa-assets/blob/main/shutterstock_369899225.jpg?raw=true"
                   alt="AI問題解決プロフェッショナル"
                   className="w-full object-cover"
                 />
