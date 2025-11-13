@@ -8,9 +8,9 @@ export default function ProgramSection() {
       examples: [
         "売上の急激な低下への対応",
         "主要顧客からのクレーム",
-        "品質不良による出荷停止",
+        
         "人材の退職増",
-        "サプライチェーン途絶",
+        
       ],
       color: "#2563eb", // blue-600
       accentBg: "#dbeafe", // blue-100
@@ -23,8 +23,8 @@ export default function ProgramSection() {
       description: "3C分析等を踏まえた企業・事業部単位での戦略的課題解決力を習得。",
       examples: [
         "既存事業の売上微減傾向",
-        "顧客層の世代交代への備え",
-        "海外市場での価格競争激化予兆",
+       
+       
         "新しいテクノロジーの出現",
         "中期経営計画策定",
       ],
@@ -39,9 +39,9 @@ export default function ProgramSection() {
       description: "人と組織の意識や行動を変革し、持続的成長を実現。",
       examples: [
         "部門ビジョン策定と実行計画",
-        "部署横断の業務プロセス改革",
+       
         "グローバルプロジェクトでの文化統合",
-        "働き方改革の推進",
+       
         "社内対立解消を伴う全社改革",
       ],
       color: "#9333ea", // purple-600

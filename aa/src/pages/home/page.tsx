@@ -7,7 +7,7 @@ import FeaturesSection from './components/FeaturesSection';
 import TransformationSection from './components/TransformationSection';
 import ProgramSection from './components/ProgramSection';
 import LearningCycleSection from './components/LearningCycleSection';
-//import CTASection from './components/CTASection';
+import CTASection from './components/CTASection';
 import Footer from './components/Footer';
 
 export default function Home() {
@@ -21,7 +21,7 @@ export default function Home() {
       <TransformationSection />
       <ProgramSection />
       <LearningCycleSection />
-    {/*CTASection */}
+      <CTASection />
       <Footer />
     </div>
   );

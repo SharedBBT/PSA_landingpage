@@ -1,9 +1,10 @@
-import React, { useState } from "react";
-import Button from "../base/Button";
+import React from "react";
 
 export default function Header() {
-  // ✅ 定义一个状态保存用户输入的名字
-  const [name, setName] = useState("");
+  const handleConsultation = () => {
+    // 無料相談のロジック（例：モーダルを開く、ページ遷移など）
+    alert("無料相談のお申し込みページへ移動します");
+  };
 
   const handleSubmit = async () => {
     try {
@@ -11,7 +12,7 @@ export default function Header() {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          name: name || "Anonymous", // 👈 如果没输入，就用 Anonymous
+          name: "Anonymous",
           course: "AI × PSA Bootcamp",
         }),
       });
@@ -42,18 +43,23 @@ export default function Header() {
           </span>
         </div>
 
-        {/* 右侧：输入 + 按钮 */}
+        {/* 右侧：两个按钮 */}
         <div className="flex items-center space-x-4">
-          <input
-            type="text"
-            placeholder="お名前"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            className="border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-          />
-          <Button size="sm" onClick={handleSubmit}>
-            お申し込み
-          </Button>
+          {/* 無料相談ボタン */}
+          <button
+            onClick={handleConsultation}
+            className="px-4 py-2 text-sm font-semibold text-blue-600 bg-white border-2 border-blue-600 rounded-lg hover:bg-blue-50 transition-all"
+          >
+            無料相談
+          </button>
+
+          {/* お申し込みボタン（紫色に変更） */}
+          <button
+            onClick={handleSubmit}
+            className="px-4 py-2 text-sm font-semibold text-white bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 rounded-lg shadow-md transition-all"
+          >
+            受講申込
+          </button>
         </div>
       </div>
     </header>

@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { strong } from "framer-motion/client";
 import { User, Lightbulb, Bot } from "lucide-react";
 
 export default function SolutionSection() {
@@ -10,8 +9,8 @@ export default function SolutionSection() {
       description: (
         <>
           理論は「核」だけを学び、即アウトプットへ<br />
-          <strong>インプット3割：</strong>
-          アウトプット7割の「実戦比率」で、「知っている」を「使いこなせる」に変える
+          インプット3割：
+          <strong>アウトプット7割</strong>の「実戦比率」で、「知っている」を「使いこなせる」に変える
         </>
       ),
     },
@@ -46,7 +45,7 @@ export default function SolutionSection() {
             className="flex justify-center"
           >
             <img
-              src="https://github.com/SharedBBT/psa-assets/blob/main/shutterstock_430168801.jpg?raw=true"
+              src="https://github.com/SharedBBT/psa-assets/blob/main/shutterstock_369899225.jpg?raw=true"
               alt="AI協働による問題解決"
               className="w-full max-w-md lg:max-w-lg rounded-2xl shadow-2xl object-cover border border-blue-100"
             />
