@@ -42,14 +42,14 @@ export default function TransformationSection() {
           >
             <h3 className="text-2xl font-bold text-red-600 mb-5 flex items-center">
               <i className="ri-emotion-sad-line mr-2 text-3xl"></i>
-              Before（受講前）
+              Before（受講前）：あなたの「今」の課題
             </h3>
             <ul className="space-y-3 text-gray-700 leading-relaxed">
               {[
-                "上司やクライアントからの難題に、どう進めるか迷ってしまう",
-                "問題を「なんとなくの感覚」で処理してしまう",
-                "チームに意見を求められても、自信を持って答えられない",
-                "時間だけが過ぎ、成果につながらない焦りを感じる",
+                "AIがうまく問題解決に活かせない。",
+                "解決の道筋が立てられず議論が迷走。",
+                "ロジック不足で関係者を説得できない",
+                "努力が成果に結びつかず、焦る",
               ].map((text, i) => (
                 <li key={i} className="flex items-start space-x-2">
                   <i className="ri-close-circle-line text-red-500 mt-0.5 flex-shrink-0"></i>
@@ -68,14 +68,14 @@ export default function TransformationSection() {
           >
             <h3 className="text-2xl font-bold text-blue-600 mb-5 flex items-center">
               <i className="ri-emotion-happy-line mr-2 text-3xl"></i>
-              After（受講後）
+              After （受講後）：修了後のあなた
             </h3>
             <ul className="space-y-3 text-gray-700 leading-relaxed">
               {[
-                "どんな課題も「分解して考える」習慣が身につく",
-                "AIを活用して最適な仮説・解決策を短時間で導ける",
-                "会議や議論の場で、ロジックに基づく発言ができる",
-                "チームを導く「思考のリーダー」として信頼される存在に",
+                "最適な解決策を自力で導き出せる。",
+                "AIを「参謀」にして問題解決できる。",
+                "ロジックで関係者を確実に動かせる。",
+                "問題発見・解決を通じ真のリーダーに。",
               ].map((text, i) => (
                 <li key={i} className="flex items-start space-x-2">
                   <i className="ri-check-circle-line text-blue-500 mt-0.5 flex-shrink-0"></i>

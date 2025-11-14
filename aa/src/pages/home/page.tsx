@@ -1,13 +1,13 @@
-
 import Header from '../../components/feature/Header';
 import HeroSection from './components/HeroSection';
 import ProblemSection from './components/ProblemSection';
 import SolutionSection from './components/SolutionSection';
-import FeaturesSection from './components/FeaturesSection';
+// import FeaturesSection from './components/FeaturesSection';
 import TransformationSection from './components/TransformationSection';
 import ProgramSection from './components/ProgramSection';
+import IntroductionSection from './components/IntroductionSection';
 import LearningCycleSection from './components/LearningCycleSection';
-import CTASection from './components/CTASection';
+// import CTASection from './components/CTASection';
 import Footer from './components/Footer';
 
 export default function Home() {
@@ -17,11 +17,12 @@ export default function Home() {
       <HeroSection />
       <ProblemSection />
       <SolutionSection />
-      <FeaturesSection />
+      {/* <FeaturesSection /> */}
       <TransformationSection />
       <ProgramSection />
+      <IntroductionSection />
       <LearningCycleSection />
-      <CTASection />
+      {/* <CTASection /> */}
       <Footer />
     </div>
   );
