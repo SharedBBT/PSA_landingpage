@@ -26,7 +26,7 @@ export default function HeroSection() {
             <h1 className="text-5xl lg:text-6xl font-extrabold text-gray-900 mb-6 leading-[1.1] tracking-tight">
               <span className="block">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-600">
-                  AI x
+                  AIx
                 </span>{' '}
                 問題解決
               </span>
@@ -78,7 +78,7 @@ export default function HeroSection() {
             <div className="overflow-hidden rounded-2xl shadow-2xl group transition-all duration-500 ease-out hover:shadow-3xl">
               <div className="w-[120%] -ml-[10%] transition-transform duration-500 ease-out group-hover:scale-105">
                 <img
-                  src="https://github.com/SharedBBT/psa-assets/blob/main/shutterstock_369899225.jpg?raw=true"
+                  src="https://github.com/SharedBBT/psa-assets/blob/main/adobe.jpeg?raw=true"
                   alt="AI問題解決プロフェッショナル"
                   className="w-full object-cover"
                 />

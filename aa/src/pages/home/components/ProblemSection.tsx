@@ -75,15 +75,36 @@ export default function ProblemSection() {
           ))}
         </div>
 
-        {/* 結論バナー */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4 }}
-          className="mt-16 inline-block bg-gradient-to-r from-blue-700 to-indigo-500 text-white px-8 py-4 rounded-full font-semibold shadow-md"
-        >
-          このBootcampは、そのアンチテーゼとして設計されました
-        </motion.div>
+        {/* Footer - 完全に置き換え */}
+        <div className="mt-12 text-center">
+          <div
+            className="
+              relative inline-block max-w-4xl
+              bg-gradient-to-br from-blue-700 to-blue-900
+              text-white px-10 py-10
+              rounded-3xl shadow-[0_8px_40px_rgba(30,64,175,0.3)]
+              border border-blue-300/40
+              hover:shadow-[0_10px_50px_rgba(30,64,175,0.45)]
+              hover:-translate-y-1
+              transition-all duration-500
+            "
+          >
+            <h3 className="text-xl font-bold mb-3 text-white drop-shadow-sm">
+              プロブレムソルビング・アプローチ（PSA）
+            </h3>
+            <p className="text-blue-100 text-sm mb-4 leading-relaxed">
+              問題解決 - PSA（プロブレムソルビング・アプローチ）とは<br />
+              AI時代においてテクノロジーには代替できない「本質」を見抜き、
+              ファクトとロジックで自ら解を創り出す、
+              21世紀のビジネスパーソン必須の「思考OS」。
+            
+            </p>
+            <div className="bg-white/10 text-yellow-300 px-6 py-3 rounded-full inline-block font-semibold text-sm shadow-md border border-blue-300/30">
+              マーケティング・営業・経営企画・開発・人事...  
+              あらゆる部門を貫く「脳のキラーアプリ」
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

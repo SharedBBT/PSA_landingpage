@@ -1,25 +1,4 @@
 export default function LearningCycleSection() {
-  const weeklySchedule = [
-    {
-      week: "Module 1",
-      title: "問題の全体像把握と問題定義",
-      subtitle: "What & Where",
-      desc: '曖昧な問題を"構造化"し、正しく定義する力を養います。課題の本質を見抜く最初の一歩。',
-    },
-    {
-      week: "Module 2",
-      title: "原因分析と本質的課題特定",
-      subtitle: "Why & So what?",
-      desc: '事象の裏にある根本要因を分析。再発しないための"本質的思考"を習得します。',
-    },
-    {
-      week: "Module 3",
-      title: "解決策立案と実行",
-      subtitle: "How & Why not yet?",
-      desc: "創造的かつ現実的な解決策を立て、行動計画に落とし込みます。AIを活用して仮説を高速検証。",
-    },
-  ];
-
   const features = [
     {
       icon: "ri-task-line",
@@ -64,56 +43,6 @@ export default function LearningCycleSection() {
             </span>
             を採用。一時的な学びではなく、脳の思考プロセスそのものを書き換えます。
           </p>
-        </div>
-
-        <div className="mb-20">
-          <h3 className="text-2xl font-bold text-center text-gray-900 mb-10">
-            3週間で定着する "思考の習慣"
-          </h3>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {weeklySchedule.map((schedule, index) => {
-              const images = [
-                'https://github.com/SharedBBT/psa-assets/blob/main/12.png?raw=true',
-                'https://github.com/SharedBBT/psa-assets/blob/main/14.png?raw=true',
-                'https://github.com/SharedBBT/psa-assets/blob/main/16.png?raw=true'
-              ];
-              
-              return (
-                <div
-                  key={index}
-                  className="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl border-t-4 border-blue-500 transition-all duration-300"
-                >
-                  <div className="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 bg-blue-100">
-                    <span className="font-bold text-lg text-blue-600">{index + 1}</span>
-                  </div>
-                  <h4 className="font-bold mb-1 text-blue-700">{schedule.week}</h4>
-                  <p className="font-semibold text-gray-900 text-sm mb-1">{schedule.title}</p>
-                  <p className="text-xs font-medium text-blue-700 mb-2">{schedule.subtitle}</p>
-                  <p className="text-gray-600 text-sm leading-relaxed mb-4">{schedule.desc}</p>
-
-                  <div className="rounded-xl overflow-hidden shadow-sm">
-                    <img 
-                      src={images[index]} 
-                      alt={`${schedule.title} イメージ`}
-                      className="w-full h-48 object-cover"
-                    />
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-
-          <div className="text-center mt-10">
-            <div className="inline-block max-w-4xl rounded-3xl px-12 py-10 bg-gradient-to-br from-blue-700 to-indigo-900 text-blue-100 border border-blue-300/40 shadow-[0_8px_40px_rgba(30,64,175,0.3)]">
-              <p className="text-sm leading-relaxed">
-                <strong className="text-white">1日30分 </strong>
-                忙しいビジネスパーソンでも無理なく続けられるよう、
-                "短時間 × 高密度 × 継続"の3要素で構成されています。
-                各週の振り返りで確実に定着を図ります。
-              </p>
-            </div>
-          </div>
         </div>
 
         <div>
@@ -166,21 +95,20 @@ export default function LearningCycleSection() {
                 </p>
 
                 <p className="text-lg leading-relaxed text-center">
-                  学びが一過性で終わらず、<strong className="text-yellow-300">現場で再現できる</strong>。<br/>
-                  それが「AI × PSA Bootcamp」が提供する最大の価値です。
+                  
                 </p>
 
                 <p className="text-lg leading-relaxed font-semibold text-center">
                   このスキルは、マーケティング、営業、製造、人事...<br/>
-                  <span className="text-yellow-300 text-xl">あらゆるキャリアで通用する永続資産</span>となる。
+                  
                 </p>
               </div>
 
               {/* 強調メッセージ */}
               <div className="bg-white/20 backdrop-blur-sm rounded-2xl px-8 py-6 mb-8 border border-white/30 max-w-4xl mx-auto">
                 <p className="text-white text-xl lg:text-2xl font-bold leading-relaxed text-center">
-                  思考の習慣が変われば、<br/>
-                  <span className="text-yellow-300">キャリアの未来が変わる。</span>
+                  あらゆるキャリアで通用する<br/>
+                  <span className="text-yellow-300">永続資産</span>となる
                 </p>
               </div>
 
@@ -197,7 +125,7 @@ export default function LearningCycleSection() {
               </div>
 
               <p className="text-sm text-white/80 mt-6 text-center">
-                ※ 参加無料 | 強引な勧誘一切なし | 30日間全額返金保証
+               
               </p>
             </div>
           </div>

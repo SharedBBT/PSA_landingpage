@@ -24,7 +24,7 @@ export default function TransformationSection() {
             transition={{ delay: 0.2, duration: 0.6 }}
             className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed"
           >
-            AI × PSA Bootcamp は、単なるスキル研修ではありません。
+            AI× PSA Bootcamp は、単なるスキル研修ではありません。
             これは、あなたの「考え方」と「行動パターン」を根本から変える
             <span className="font-semibold text-blue-700">トランスフォーメーションプログラム</span>
             です。
