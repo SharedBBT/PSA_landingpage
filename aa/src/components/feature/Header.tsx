@@ -1,27 +1,15 @@
 import React from "react";
 
 export default function Header() {
+  const APPLY_URL =
+    "https://www.bbt757.com/svlShop/cart.do?code=d619e6da0ec7067b3d829cee1e2c9cb819f0eb18fc28dd34b45ee0614ac37b0b";
+
   const handleConsultation = () => {
     alert("無料相談のお申し込みページへ移動します");
   };
 
-  const handleSubmit = async () => {
-    try {
-      const response = await fetch("http://localhost:5000/api/submit", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name: "Anonymous",
-          course: "AI × PSA Bootcamp",
-        }),
-      });
-
-      const data = await response.json();
-      alert(data.message);
-    } catch (error) {
-      alert("申し込みに失敗しました 😢");
-      console.error(error);
-    }
+  const handleApply = () => {
+    window.location.href = APPLY_URL;
   };
 
   return (
@@ -38,12 +26,13 @@ export default function Header() {
               alt="PSA Logo"
               className="h-10 w-auto mr-3 rounded-full"
             />
-            <span
-              className="text-2xl font-bold text-blue-600"
-              style={{ fontFamily: "'Dancing Script', cursive" }}
-            >
-              AI x PSA Bootcamp
-            </span>
+            <h1 className="text-lg sm:text-2xl font-extrabold leading-tight tracking-tight">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-600">
+                AIx
+              </span>
+              <span className="text-gray-800"> 問題解決</span>
+              <span className="text-blue-600"> Bootcamp</span>
+            </h1>
           </div>
 
           {/* PC: 按钮（sm 以上显示） */}
@@ -56,7 +45,7 @@ export default function Header() {
             </button>
 
             <button
-              onClick={handleSubmit}
+              onClick={handleApply}
               className="px-4 py-2 text-sm font-semibold text-white bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 rounded-lg shadow-md transition-all"
             >
               受講申込
@@ -66,22 +55,24 @@ export default function Header() {
       </header>
 
       {/* ======================= */}
-      {/* Mobile版：右侧悬浮按钮 */}
+      {/* Mobile版：底部按钮（并列） */}
       {/* ======================= */}
-      <div className="sm:hidden fixed right-4 bottom-24 z-50 flex flex-col space-y-3">
-        <button
-          onClick={handleConsultation}
-          className="px-4 py-2 text-sm font-semibold text-blue-600 bg-white border-2 border-blue-600 rounded-lg shadow-md"
-        >
-          無料相談
-        </button>
+      <div className="sm:hidden fixed bottom-0 left-0 w-full z-50 bg-white border-t border-gray-200 px-4 py-3">
+        <div className="flex justify-between gap-3">
+          <button
+            onClick={handleConsultation}
+            className="flex-1 px-4 py-2 text-sm font-semibold text-blue-600 bg-white border-2 border-blue-600 rounded-lg shadow"
+          >
+            無料相談
+          </button>
 
-        <button
-          onClick={handleSubmit}
-          className="px-4 py-2 text-sm font-semibold text-white bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg shadow-md"
-        >
-          受講申込
-        </button>
+          <button
+            onClick={handleApply}
+            className="flex-1 px-4 py-2 text-sm font-semibold text-white bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg shadow"
+          >
+            受講申込
+          </button>
+        </div>
       </div>
     </>
   );
