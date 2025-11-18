@@ -1,6 +1,13 @@
 import Button from '../../../components/base/Button';
 
 export default function HeroSection() {
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "/material.pdf"; // ← public/material.pdf 自动从根路径提供
+    link.download = "資料.pdf";  // ← 下载后的文件名
+    link.click();
+  };
+
   return (
     <section className="relative bg-gradient-to-br from-blue-50 via-white to-indigo-50 py-20 overflow-hidden">
       {/* 背景淡色纹理（放大+右移） */}
@@ -8,21 +15,20 @@ export default function HeroSection() {
         className="absolute inset-0 opacity-10 bg-no-repeat"
         style={{
           backgroundImage: `url('https://github.com/SharedBBT/psa-assets/blob/main/pixta_38930656_XL.jpg?raw=true')`,
-          backgroundPosition: '70% center', // ✅ 向右偏移25%
-          backgroundSize: '80%',            // ✅ 放大30%
+          backgroundPosition: '70% center',
+          backgroundSize: '80%',
         }}
       />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          
+
           {/* 左侧文字区 */}
           <div className="text-left">
             <div className="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
               🚀 「学んだつもり」で、止まっていませんか？
             </div>
 
-            {/* ✅ 改进后的标题区（行距压缩 + 紧凑布局） */}
             <h1 className="text-5xl lg:text-6xl font-extrabold text-gray-900 mb-6 leading-[1.1] tracking-tight">
               <span className="block">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-600">
@@ -40,19 +46,25 @@ export default function HeroSection() {
               根本解決策を導き出す<br/>3ヶ月で、あなたの脳と思考をアップデートする実践型プログラム
             </p>
 
+            {/* 🔥 这里是按钮区（已修改） */}
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
               <Button size="lg" className="flex items-center justify-center">
                 <i className="ri-play-circle-line mr-2"></i>
                 無料相談
               </Button>
 
-              <Button variant="outline" size="lg" className="flex items-center justify-center">
+              <Button
+                variant="outline"
+                size="lg"
+                className="flex items-center justify-center"
+                onClick={handleDownload}
+              >
                 <i className="ri-download-line mr-2"></i>
                 詳細資料をダウンロード
               </Button>
             </div>
 
-            {/* 特徴アイコン列表 */}
+            {/* 特徴アイコン */}
             <div className="flex flex-wrap items-center gap-6 text-sm text-gray-500">
               <div className="flex items-center">
                 <i className="ri-time-line mr-1 text-blue-600"></i>
@@ -73,7 +85,7 @@ export default function HeroSection() {
             </div>
           </div>
 
-          {/* 右侧图片保留 */}
+          {/* 右侧图片区域 */}
           <div className="relative -mt-10">
             <div className="overflow-hidden rounded-2xl shadow-2xl group transition-all duration-500 ease-out hover:shadow-3xl">
               <div className="w-[120%] -ml-[10%] transition-transform duration-500 ease-out group-hover:scale-105">
@@ -85,6 +97,7 @@ export default function HeroSection() {
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </section>
