@@ -14,28 +14,41 @@ export default function Header() {
 
   return (
     <>
-      {/* ======================= */}
-      {/* PC版（原位置保持） */}
-      {/* ======================= */}
+      {/* PC版 Header */}
       <header className="bg-white shadow-sm sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-4">
           {/* 左侧 LOGO */}
-          <div className="flex items-center">
+          <div className="flex items-center w-full">
+            {/* PC LOGO */}
             <img
               src="https://aoba-bbt.com/wp-content/themes/bbt757-html/dist/assets/images/logo.png"
               alt="PSA Logo"
-              className="h-10 w-auto mr-3 rounded-full"
+              className="h-10 w-auto mr-3 rounded-full hidden sm:block"
             />
-            <h1 className="text-lg sm:text-2xl font-extrabold leading-tight tracking-tight">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-600">
-                AIx
-              </span>
-              <span className="text-gray-800"> 問題解決</span>
-              <span className="text-blue-600"> Bootcamp</span>
-            </h1>
+
+           {/* Mobile LOGO — 加大 20% */}
+<img
+  src="https://github.com/SharedBBT/psa-assets/blob/main/ChatGPT%20Image%202025%E5%B9%B411%E6%9C%8819%E6%97%A5%2014_03_27.png?raw=true"
+  alt="PSA Logo Mobile"
+  className="h-[67.2px] w-auto mr-3 rounded-full sm:hidden"
+/>
+
+            {/* 标题：PC 左对齐 / Mobile 右对齐 */}
+{/* 标题：PC 左对齐 / Mobile 右对齐，向左平移3px */}
+<h1
+  className="text-lg sm:text-2xl font-extrabold leading-tight tracking-tight ml-auto sm:ml-auto text-right sm:text-right"
+  style={{ marginRight: '30px' }}
+>
+  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-600">
+    AIx
+  </span>
+  <span className="text-gray-800"> 問題解決</span><br/>
+  <span className="text-blue-600"> Bootcamp</span>
+</h1>
+
           </div>
 
-          {/* PC: 按钮（sm 以上显示） */}
+          {/* PC: 按钮 */}
           <div className="hidden sm:flex items-center space-x-4">
             <button
               onClick={handleConsultation}
@@ -54,10 +67,8 @@ export default function Header() {
         </div>
       </header>
 
-      {/* ======================= */}
-      {/* Mobile版：底部按钮（并列） */}
-      {/* ======================= */}
-      <div className="sm:hidden fixed bottom-0 left-0 w-full z-50 bg-white border-t border-gray-200 px-4 py-3">
+      {/* Mobile版：底部按钮区 */}
+      <div className="sm:hidden fixed bottom-0 left-0 w-full z-50 bg-white border-t border-gray-200 px-4 pt-3 pb-4">
         <div className="flex justify-between gap-3">
           <button
             onClick={handleConsultation}

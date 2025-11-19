@@ -95,7 +95,7 @@ export default function ProblemSection() {
             <p className="text-blue-100 text-sm mb-4 leading-relaxed">
               問題解決 - PSA（プロブレムソルビング・アプローチ）とは<br />
               AI時代においてテクノロジーには代替できない「本質」を見抜き、
-              ファクトとロジックで自ら解を創り出す、
+              ファクトとロジックで自ら解を創り出す<br/>
               21世紀のビジネスパーソン必須の「思考OS」。
             
             </p>

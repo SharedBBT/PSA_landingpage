@@ -10,7 +10,7 @@ export default function CombinedFeaturesSection() {
         "AIを壁打ち相手に設定。",
         "思考スピードが何倍も深く、速くなる。",
         "多角的な視点と高速検証が可能。",
-        "問題解決の再現性を獲得。"
+        
       ]
     },
     {
@@ -19,7 +19,7 @@ export default function CombinedFeaturesSection() {
       title: "実戦比率3:7による知識の資産化",
       points: [
         "実戦比率、インプット3：アウトプット7。",
-        "「知っている」を**「使いこなせる資産」**に変貌。",
+        
         "理論は核だけ、即座に業務で実行。",
         "実践者となる強制力を持つ。"
       ]
@@ -31,7 +31,7 @@ export default function CombinedFeaturesSection() {
       points: [
         "原則として、架空の事例研究は行わない。",
         "あなたの実務課題をそのまま教材に採用。",
-        "「売上低迷」の解決をゴールに設定。",
+        
         "学習と成果直結を最優先に設計。"
       ]
     }
@@ -42,10 +42,12 @@ export default function CombinedFeaturesSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* ヘッダー */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 mb-4 leading-tight">
-            選ばれる3つの理由<br />
-            <span className="text-blue-600">あなたの思考と行動を確実に変える独自のメソッド</span>
-          </h2>
+         <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 mb-4 leading-tight">
+  選ばれる3つの理由<br />
+  <span className="text-blue-600 text-[33.6px]">
+    あなたの思考と行動を確実に変える独自のメソッドがここにある
+  </span>
+</h2>
         </div>
 
         <div className="grid lg:grid-cols-5 gap-8 items-start mb-12">
