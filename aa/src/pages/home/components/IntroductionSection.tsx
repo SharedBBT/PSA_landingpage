@@ -42,7 +42,7 @@ export default function IntroductionSection() {
                   受講期間
                 </td>
                 <td className="p-4 text-gray-800 text-base">
-                  3か月
+                  90日間
                 </td>
               </tr>
 
@@ -62,7 +62,7 @@ export default function IntroductionSection() {
                   受講形式
                 </td>
                 <td className="p-4 text-gray-800 text-base">
-                  オンデマンド×セルフペース／月1回「BLT」無料参加（参加自由 / オンラインZoom）
+                  オンデマンド×セルフペース／月1回「BLTオンラインライブ」無料参加（参加自由 / オンラインZoom）
                 </td>
               </tr>
 
