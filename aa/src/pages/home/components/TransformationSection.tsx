@@ -24,7 +24,7 @@ export default function TransformationSection() {
             transition={{ delay: 0.2, duration: 0.6 }}
             className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed"
           >
-            AI× PSA Bootcamp は、単なるスキル研修ではありません。
+            AIx 問題解決 Bootcamp は、単なるスキル研修ではありません。
             これは、あなたの「考え方」と「行動パターン」を根本から変える
             <span className="font-semibold text-blue-700">トランスフォーメーションプログラム</span>
             です。
@@ -78,9 +78,10 @@ export default function TransformationSection() {
                 "問題発見・解決を通じ真のリーダーに。",
               ].map((text, i) => (
                 <li key={i} className="flex items-start space-x-2">
-                  <i className="ri-check-circle-line text-blue-500 mt-0.5 flex-shrink-0"></i>
-                  <span>{text}</span>
-                </li>
+  <i className="ri-checkbox-circle-line text-blue-500 mt-0.5 flex-shrink-0"></i>
+  <span>{text}</span>
+</li>
+
               ))}
             </ul>
           </motion.div>
