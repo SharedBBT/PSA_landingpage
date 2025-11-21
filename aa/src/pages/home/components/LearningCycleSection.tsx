@@ -1,4 +1,13 @@
+
+
 export default function LearningCycleSection() {
+  // 1.在这里填入你的预约链接 (和 HeroSection 用同一个即可)
+  const CONSULTATION_URL = "https://calendar.app.google/MBs4MjWH1pdVyXaWA";
+  // 2.处理点击跳转
+  const handleConsultation = () => {
+    window.open(CONSULTATION_URL, '_blank', 'noopener,noreferrer');
+  };
+
   const features = [
     {
       icon: "ri-task-line",
@@ -113,21 +122,26 @@ export default function LearningCycleSection() {
               </div>
 
             {/* CTAボタン */}
-<div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-  <button className="px-10 py-5 text-lg font-bold text-purple-700 bg-white rounded-full shadow-2xl hover:bg-yellow-300 hover:text-purple-900 hover:scale-105 transition-all duration-300 flex items-center">
-    <i className="ri-calendar-check-line mr-2 text-2xl"></i>
-    今すぐ無料説明会に参加する
-  </button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              
+              {/* 3.添加 onClick 事件 */}
+              <button 
+                onClick={handleConsultation}
+                className="px-10 py-5 text-lg font-bold text-purple-700 bg-white rounded-full shadow-2xl hover:bg-yellow-300 hover:text-purple-900 hover:scale-105 transition-all duration-300 flex items-center cursor-pointer"
+              >
+                <i className="ri-calendar-check-line mr-2 text-2xl"></i>
+                今すぐ無料相談に申し込む
+              </button>
 
-  {/* 🔽 修改后的下载按钮 */}
-  <a
-    href="/material.pdf"
-    download
-    className="px-8 py-4 text-base font-semibold text-white border-2 border-white rounded-full hover:bg-white hover:text-purple-700 transition-all duration-300 flex items-center justify-center"
-  >
-    詳しい資料をダウンロード
-  </a>
-</div>
+              {/* 🔽 下载按钮保持不变 */}
+              <a
+                href="/material.pdf"
+                download
+                className="px-8 py-4 text-base font-semibold text-white border-2 border-white rounded-full hover:bg-white hover:text-purple-700 transition-all duration-300 flex items-center justify-center"
+              >
+                詳しい資料をダウンロード
+              </a>
+            </div>
 
 
               <p className="text-sm text-white/80 mt-6 text-center">

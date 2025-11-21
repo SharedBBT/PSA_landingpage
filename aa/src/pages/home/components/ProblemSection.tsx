@@ -23,7 +23,6 @@ export default function ProblemSection() {
 
   return (
     <section className="py-24 bg-gradient-to-br from-white to-blue-50">
-      {/* 容器变宽 */}
       <div className="max-w-7xl mx-auto px-6 text-center">
         {/* セクション見出し */}
         <motion.h2
@@ -31,9 +30,16 @@ export default function ProblemSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-3xl md:text-4xl font-bold text-[var(--color-primary)] mb-6 leading-snug"
+          // 修改说明：
+          // 1. text-2xl: 移动端字号变大 (约24px)
+          // 2. md:text-4xl: PC端保持大字号
+          // 3. 去掉了 whitespace-nowrap，允许自然换行
+          className="font-bold text-[var(--color-primary)] mb-6 leading-snug
+                     text-2xl sm:text-3xl md:text-4xl
+                     tracking-tight"
         >
           なぜ、あなたの問題解決力は
+          {/* 修改说明：这里直接换行，不隐藏，PC和移动端都在这里断开 */}
           <br />
           <span className="bg-gradient-to-r from-blue-700 to-indigo-500 bg-clip-text text-transparent">
             「現場で発揮されない」
@@ -41,7 +47,7 @@ export default function ProblemSection() {
           のか？
         </motion.h2>
 
-        {/* 段落部分 - 间距调整 */}
+        {/* 段落部分 */}
         <motion.p
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -53,7 +59,7 @@ export default function ProblemSection() {
           多くのリーダーが同じ壁にぶつかっています。
         </motion.p>
 
-        {/* 問題カード - 调宽、减少间距 */}
+        {/* 問題カード */}
         <div className="grid md:grid-cols-3 gap-6">
           {problems.map((problem, index) => (
             <motion.div
@@ -75,7 +81,7 @@ export default function ProblemSection() {
           ))}
         </div>
 
-        {/* Footer - 完全に置き換え */}
+        {/* Footer */}
         <div className="mt-12 text-center">
           <div
             className="
@@ -97,7 +103,6 @@ export default function ProblemSection() {
               AI時代においてテクノロジーには代替できない「本質」を見抜き、
               ファクトとロジックで自ら解を創り出す<br/>
               21世紀のビジネスパーソン必須の「思考OS」。
-            
             </p>
             <div className="bg-white/10 text-yellow-300 px-6 py-3 rounded-full inline-block font-semibold text-sm shadow-md border border-blue-300/30">
               マーケティング・営業・経営企画・開発・人事...  
