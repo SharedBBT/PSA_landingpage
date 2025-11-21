@@ -1,16 +1,25 @@
 import Button from '../../../components/base/Button';
 
 export default function HeroSection() {
+  // 1. 这里填入你的 Google Calendar 预约页面的 URL
+  const CONSULTATION_URL = "https://calendar.app.google/MBs4MjWH1pdVyXaWA"; 
+
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "/material.pdf"; // ← public/material.pdf 自动从根路径提供
-    link.download = "資料.pdf";  // ← 下载后的文件名
+    link.href = "/material.pdf";
+    link.download = "資料.pdf";
     link.click();
+  };
+
+  // 2. 添加点击处理函数，在新标签页打开
+  const handleConsultation = () => {
+    // '_blank' 表示在新标签页打开，体验更好，不会离开当前页面
+    window.open(CONSULTATION_URL, '_blank', 'noopener,noreferrer');
   };
 
   return (
     <section className="relative bg-gradient-to-br from-blue-50 via-white to-indigo-50 py-20 overflow-hidden">
-      {/* 背景淡色纹理（放大+右移） */}
+      {/* 背景淡色纹理 */}
       <div 
         className="absolute inset-0 opacity-10 bg-no-repeat"
         style={{
@@ -46,9 +55,14 @@ export default function HeroSection() {
               根本解決策を導き出す<br/>3ヶ月で、あなたの脳と思考をアップデートする実践型プログラム
             </p>
 
-            {/* 🔥 这里是按钮区（已修改） */}
+            {/* 🔥 按钮区修改 */}
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
-              <Button size="lg" className="flex items-center justify-center">
+              {/* 3. 绑定 onClick 事件 */}
+              <Button 
+                size="lg" 
+                className="flex items-center justify-center"
+                onClick={handleConsultation}
+              >
                 <i className="ri-play-circle-line mr-2"></i>
                 無料相談
               </Button>

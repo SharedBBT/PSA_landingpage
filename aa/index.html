@@ -17,64 +17,9 @@
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
     
-    <!-- Readdy Agent Widget -->
-    <script 
-      src="https://readdy.ai/api/public/assistant/widget?projectId=c84e999e-be14-482f-9a59-0d1a780a80c9"
-      mode="hybrid"
-      voice-show-transcript="true"
-      theme="light"
-      size="compact"
-      accent-color="#3B82F6"
-      button-base-color="#1E40AF"
-      button-accent-color="#FFFFFF"
-      defer
-    ></script>
-
-    <!-- Widgetの位置を調整するスクリプト -->
-    <script>
-      // Widgetが読み込まれるのを待つ
-      function adjustWidgetPosition() {
-        // 様々な可能性のあるセレクタを試す
-        const selectors = [
-          'iframe[src*="readdy"]',
-          '[id*="readdy"]',
-          '[class*="readdy"]',
-          'div[style*="position: fixed"]',
-          'div[style*="z-index"]'
-        ];
-
-        let widget = null;
-        for (const selector of selectors) {
-          widget = document.querySelector(selector);
-          if (widget) break;
-        }
-
-        if (widget) {
-          // モバイルかどうかを判定
-          const isMobile = window.innerWidth <= 640;
-          
-          if (isMobile) {
-            widget.style.bottom = '80px';
-            widget.style.right = '16px';
-          } else {
-            widget.style.bottom = '20px';
-            widget.style.right = '20px';
-          }
-          
-          console.log('Widget位置調整完了:', widget);
-        } else {
-          // Widgetがまだ見つからない場合は再試行
-          setTimeout(adjustWidgetPosition, 500);
-        }
-      }
-
-      // ページ読み込み後に実行
-      window.addEventListener('load', () => {
-        setTimeout(adjustWidgetPosition, 1000);
-      });
-
-      // リサイズ時にも再調整
-      window.addEventListener('resize', adjustWidgetPosition);
-    </script>
-  </body>
+    "
+      =================================================================
+    -->
+    
+    </body>
 </html>
