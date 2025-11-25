@@ -28,7 +28,7 @@ export default function Header() {
             <img
               src="https://aoba-bbt.com/wp-content/themes/bbt757-html/dist/assets/images/logo.png"
               alt="PSA Logo"
-              className="h-10 w-auto mr-3 rounded-full hidden sm:block"
+              className="h-7 w-auto mr-3 rounded-full hidden sm:block"
             />
 
             {/* Mobile LOGO: 显示在左侧 */}
