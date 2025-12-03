@@ -141,7 +141,7 @@ export default function TransformationSection() {
                   whileTap={{ scale: 0.98 }}
                   className="inline-block bg-yellow-400 text-blue-900 font-semibold px-8 py-3 rounded-full shadow-md hover:bg-yellow-300 transition"
                 >
-                  無料説明会に参加する →
+                  無料相談会に参加する →
                 </motion.a>
               </div>
             </div>
