@@ -52,7 +52,8 @@ export default function IntroductionSection() {
                   開講月
                 </td>
                 <td className="p-4 text-gray-800 text-base">
-                  随時開講（1日.11日.21日） ※各10日前締切
+                  随時開講（1日.11日.21日） ※各10日前締切<br/>
+                  開講日はお申し込みから一番近い日程となります。その他の日程をご希望の場合はお申し込み時の通信欄にてお知らせください。
                 </td>
               </tr>
 
